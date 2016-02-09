@@ -9,7 +9,7 @@ with io.open(here + '/README.md') as f:
 requires = open(os.path.join(here, 'requirements.txt')).read().split('\n')
 
 setup(name='poolmanager',
-      version='0.0.1',
+      version='0.0.2',
       description='Simple pool manager',
       long_description=long_description,
       classifiers=[],
