@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 
 setup(name='poolmanager',
-      version='0.0.4',
+      version='0.0.5',
       description='Simple pool manager',
       classifiers=[],
       keywords='',
@@ -18,5 +18,4 @@ setup(name='poolmanager',
       test_suite='nose.collector',
       install_requires=[],
       )
-      
 

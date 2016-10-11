@@ -32,7 +32,7 @@ def main():
     chunk = 2
     iterator = xrange(0, 10)
     pm = PoolManager(numProcs=2, factor=2, store=True)
-    pm.imap_unordered(iterator, add, chunk, callback=callback)
+    pm.imap_unordered(add, iterator, chunk, callback=callback)
 
 if __name__ == '__main__':
     main()

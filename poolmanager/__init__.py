@@ -40,7 +40,7 @@ class PoolManager:
         except Exception as e:
             raise Exception(e)
 
-    def imap_unordered(self, iterable, func, chunks, callback=None):
+    def imap_unordered(self, func, iterable, chunks, callback=None):
         try:
             self._writer(self._pool.imap_unordered(
                 self._create(func), iterable, chunks

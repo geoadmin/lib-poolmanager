@@ -20,27 +20,27 @@ def error_func(x):
 def setup_func_no_store():
     global pm
     pm = PoolManager(numProcs=2)
-    pm.imap_unordered(xrange(0, 100), add, 2)
+    pm.imap_unordered(add, xrange(0, 100), 2)
 
 
 def setup_func_store():
     global pm_store
     pm_store = PoolManager(numProcs=2, store=True)
-    pm_store.imap_unordered(xrange(0, 100), add, 2)
+    pm_store.imap_unordered(add, xrange(0, 100), 2)
 
 
 @raises(Exception)
 def setup_func_error():
     global pm_error
     pm_error = PoolManager(numProcs=2, factor=2, store=True)
-    pm_error.imap_unordered('notvalid', add, 2)
+    pm_error.imap_unordered(add, 'notvalid', 2)
 
 
 @raises(Exception)
 def setup_func_error_within_subprocess():
     global pm_error_sub
     pm_error_sub = PoolManager(numProcs=2, store=True)
-    pm_error_sub.imap_unordered(xrange(0, 100), error_func, 2)
+    pm_error_sub.imap_unordered(error_func, xrange(0, 100), 2)
 
 
 def setup_func_with_callback():
@@ -51,7 +51,7 @@ def setup_func_with_callback():
         print counter
         print res
     pm_c = PoolManager(numProcs=2, store=True)
-    pm_c.imap_unordered(xrange(0, 100), add, 2, callback=callback)
+    pm_c.imap_unordered(add, xrange(0, 100), 2, callback=callback)
 
 
 @with_setup(setup_func_no_store)
