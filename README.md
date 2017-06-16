@@ -1,9 +1,7 @@
-===========
 poolmanager
 ===========
 
 [![Build Status](https://travis-ci.org/loicgasser/poolmanager.svg?branch=master)](https://travis-ci.org/loicgasser/poolmanager)
-[![Coverage Status](https://coveralls.io/repos/github/loicgasser/poolmanager/badge.svg?branch=master)](https://coveralls.io/github/loicgasser/poolmanager?branch=master)
 
 ## Simple pool manager implementation for unordered results
 
@@ -73,7 +71,7 @@ python setup.py test
 
 ```
 
-####CONTRIBUTORS:
+### CONTRIBUTORS:
 
 - [Gilber Jeiziner](https://github.com/gjn)
 - [Loïc Gasser](https://github.com/loicgasser)
