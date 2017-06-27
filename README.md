@@ -1,7 +1,7 @@
 poolmanager
 ===========
 
-[![Build Status](https://travis-ci.org/loicgasser/poolmanager.svg?branch=master)](https://travis-ci.org/loicgasser/poolmanager)
+[![Build Status](https://travis-ci.org/geoadmin/lib-poolmanager.svg?branch=master)](https://travis-ci.org/geoadmin/lib-poolmanager)
 
 ## Simple pool manager implementation for unordered results
 
