@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 
 setup(name='poolmanager',
-      version='0.0.5',
+      version='0.0.6',
       description='Simple pool manager',
       classifiers=[],
       keywords='',

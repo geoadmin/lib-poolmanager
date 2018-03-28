@@ -68,8 +68,54 @@ print pm.results
 
 ```
 python setup.py test
+```
+
+### Publish a new version of the module
+
+Edit `$HOME/.pypirc` and add (username and password in keepass):
 
 ```
+[distutils]
+index-servers =
+  pypi
+  pypitest
+
+[pypi]
+repository=https://upload.pypi.org/legacy/
+username=iwi***
+password=
+
+[pypitest]
+repository=https://test.pypi.org/legacy/
+username=iwi***
+password=
+```
+
+Bump version in `setup.py`.
+
+Upload the new module to the test repository:
+
+```
+python setup.py sdist upload -r pypitest
+python setup.py bdist_wheel upload -r pypitest
+```
+
+Test local install from test repository.
+
+```
+pip install -i https://test.pypi.org/simple/ poolmanager
+```
+
+If everything is ok, push the new version to the default repository.
+
+```
+python setup.py sdist upload -r pypi
+python setup.py bdist_wheel upload -r pypi
+```
+
+Test the newly created module.
+
+Create a RELEASE in github.
 
 ### CONTRIBUTORS:
 
