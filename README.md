@@ -96,6 +96,7 @@ Bump version in `setup.py`.
 Upload the new module to the test repository:
 
 ```
+pip install --upgrade setuptools
 python setup.py sdist upload -r pypitest
 python setup.py bdist_wheel upload -r pypitest
 ```

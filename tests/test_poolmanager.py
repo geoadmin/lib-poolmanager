@@ -1,9 +1,15 @@
 # -*- coding: utf-8 -*-
 
+import sys
 from nose import with_setup
 from nose.tools import raises
-
 from poolmanager import PoolManager
+
+PY3 = sys.version_info[0] == 3
+
+
+if PY3:
+    xrange = range
 
 
 def add(x):
@@ -48,8 +54,8 @@ def setup_func_with_callback():
     global callback
 
     def callback(counter, res):
-        print counter
-        print res
+        print(counter)
+        print(res)
     pm_c = PoolManager(numProcs=2, store=True)
     pm_c.imap_unordered(add, xrange(0, 100), 2, callback=callback)
 
