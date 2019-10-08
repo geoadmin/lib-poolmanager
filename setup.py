@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
         long_description = fh.read()
 
 setup(name='poolmanager',
-      version='0.0.7',
+      version='0.1.0',
       description='Simple pool manager',
       long_description=long_description,
       long_description_content_type="text/markdown",
