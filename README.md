@@ -5,7 +5,7 @@ poolmanager
 
 ## Simple pool manager implementation for unordered results
 
-poolmanager is compatible with python 2.6, 2.7, 3.6
+poolmanager is compatible with python 2.6, 2.7, 3.6 and 3.7
 
 ### Usage
 
