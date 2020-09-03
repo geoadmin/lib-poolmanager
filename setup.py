@@ -5,7 +5,7 @@ with open("README.md", "rb") as fh:
         long_description = fh.read().decode('utf-8')
 
 setup(name='poolmanager',
-      version='0.2.0',
+      version='0.2.1',
       description='Simple pool manager',
       long_description=long_description,
       long_description_content_type="text/markdown",
@@ -21,6 +21,7 @@ setup(name='poolmanager',
           'Programming Language :: Python :: 3.5',
           'Programming Language :: Python :: 3.6',
           'Programming Language :: Python :: 3.7',
+          'Programming Language :: Python :: 3.8',
           'Topic :: Scientific/Engineering :: GIS',
           'Topic :: Software Development :: Libraries :: Python Modules'
       ],
